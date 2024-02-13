@@ -1,11 +1,11 @@
 .login-signup-container {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-  
+
 .background-image {
   position: absolute;
   top: 0;
@@ -13,35 +13,36 @@
   width: 100%;
   height: 100%;
   background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.f39jvygchyqBhPiAM1LDIwHaE7%26pid%3DApi&f=1&ipt=bc0bf072d110d272c153409ddb09057266e6784767817ad293ae10b83c6623b7&ipo=images');
-    background-size: cover;
-    filter: brightness(0.5); /* Adjust brightness for better readability */
-  }
-  
-  .form-container {
-    z-index: 1;
-    max-width: 300px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect for better visibility */
-  }
-  
-  h2 {
-    margin-top: 0;
-    text-align: center;
-  }
-  
-  input[type='email'],
-  input[type='password'],
-  button {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
+  background-size: cover;
+  filter: brightness(0.5);
+}
+
+.form-container {
+  z-index: 1;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
 button {
   background-color: #007bff;
   color: #fff;
@@ -53,7 +54,7 @@ button {
 button:hover {
   background-color: #0056b3;
 }
-  
+
 p {
   margin-top: 10px;
   text-align: center;
@@ -65,30 +66,84 @@ p button {
   color: #007bff;
   cursor: pointer;
 }
-  
+
 p button:hover {
   text-decoration: underline;
 }
-  
 
   /* BlogCard.css */
-.blog-card {
-    background-color: #fff;
+  .blog-card {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 20px;
     margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .blog-card h3 {
-    margin-top: 0;
+  .blog-header {
+    position: relative;
   }
+  
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .blog-title {
+    font-size: 24px;
+    margin: 20px;
+  }
+  
+  .blog-content {
+    margin: 0 20px 20px;
+    color: #555;
+  }
+  
+  .blog-author {
+    font-style: italic;
+    margin: 0 20px 10px;
+    color: #777;
+  }
+  
+  .like-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  
+  .like-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .like-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .like-count {
+    font-size: 16px;
+    color: #777;
+  }
+  
   
   /* BlogsPage.css */
   .blogs-page {
     padding: 20px;
   }
   
+  .tsc{
+    text-align: center;
+  }
+
   .blog-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -138,5 +193,99 @@ p button:hover {
   
   .active {
     color: #00bcd4;
+  }
+  
+
+
+  .homepage {
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .featured-posts {
+    margin-bottom: 40px;
+  }
+  
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .post-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .post-card h3 {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .newsletter {
+    text-align: center;
+  }
+  
+  .newsletter h2 {
+    margin-bottom: 20px;
+  }
+  
+  .newsletter form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .newsletter input[type='email'],
+  .newsletter button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .newsletter button {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .newsletter button:hover {
+    background-color: #0056b3;
   }
   

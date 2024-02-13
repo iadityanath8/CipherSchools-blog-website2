@@ -1,18 +1,25 @@
+// App.js
 import './App.css';
-import LsPage from './components/Login';
+import LoginPage from './components/Login';
 import BlogsPage from './components/Blog';
-import { BrowserRouter as Router,Route,Routes, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './authentication/authContext';
+import ProtectedRoute from './protectedRoute'; // Ensure correct import path
 
 
-function App() {
+const App = () => {
   return (
+    <AuthProvider>
     <Router>
       <Routes>
-        <Route path='/' Component={LsPage}/>
-        <Route path='/blogs' Component={BlogsPage}/>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/blogs" element={<ProtectedRoute element={BlogsPage}/>} />
       </Routes>
     </Router>
-  )
-}
+    </AuthProvider>
+  );
+};
 
 export default App;
+
+
